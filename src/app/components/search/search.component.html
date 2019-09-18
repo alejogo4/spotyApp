@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <input #termino class="form-control mt-5" type="search" (keyup)="buscar(termino.value)" placeholder="Buscar artista" aria-label="Search">
+
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="loading != null  && !loading"></app-loading>
+<app-cards [items]="artistas"></app-cards>
